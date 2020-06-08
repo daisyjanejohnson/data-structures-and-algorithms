@@ -63,7 +63,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  str.forEach(string => {
+    str.splice(0);
+    result.push;
+  })
   return result;
 };
 
@@ -123,7 +126,16 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(ingredient => {
+    // cut off the numbers
+    let firstIndex = ingredient.indexOf(' ');
+    let secondStr = ingredient.slice(firstIndex + 1);
+    //cut off the units
+    let secondIndex = secondStr.indexOf(' ');
+    let finalStr = secondStr.slice(secondIndex + 1);
+    
+    result.push(finalStr);
+  })
   return result;
 };
 
