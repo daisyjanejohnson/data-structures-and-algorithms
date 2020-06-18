@@ -72,9 +72,7 @@ let $ = createSnippetWithJQuery(`
 const templatingWithMustache = () => {
   let newArr = [];
   characters.forEach(person => {
-    let template = $('#template').html();
-    let html = Mustache.render(template, this);
-     newArr.push.html;  
+     newArr.push(Mustache.render($('#template').html(), person));
   })
   return newArr;
 };
@@ -120,8 +118,16 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  arr.forEach( obj => {
-    if(character === Object.values(obj))
+  let hasKids = false;
+  let charArr = Object.values(arr);
+  arr.forEach(obj =>{
+    if(obj.name === character){
+      if(obj.children.length > 0){
+        hasKids=true;
+      }
+    }
+  })
+  return hasKids;
 
 };
 
@@ -134,7 +140,16 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let hasKids = false
+  let charArr = Object.entries(arr);
+  arr.forEach(obj => {
+    if(obj.name === character){
+      if(obj.children.length > 0){
+        hasKids = true;
+      }
+    }
+  })
+  return hasKids;
 };
 
 /* ------------------------------------------------------------------------------------------------
