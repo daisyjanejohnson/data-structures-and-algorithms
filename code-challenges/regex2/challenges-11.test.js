@@ -12,12 +12,14 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
+
   let newArr = [];
 
   people.map(person => {
     return newArr.push(`${person.firstName} ${person.lastName}`);
   })
   return newArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,8 +31,10 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  let validator = /^\d{4}\b/g;
-    return validator.test(pin);
+
+  let validate = /^\d{4}\b/g;
+    return validate.test(pin);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +80,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
+
   let phoneRegex = /^(\(\d{3}\)|\d{3})(\s|-)?\(\d{3})(\s|-)?(\d{4})$/gm
   return phoneRegex.test(phoneNumber);
 };
