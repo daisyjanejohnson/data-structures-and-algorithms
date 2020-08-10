@@ -40,11 +40,9 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-let totalArray = [];
-for(let i=0; i<hoursOpen.length; i++){
-  totalArray[i]=firstPike[i]+seaTac[i]+seattleCenter[i]+capHill[i]+alkiBeach[i];
-}
-return totalArray;
+  return stores.reduce((arr1, arr2) => {
+
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +57,10 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   let objectArray=[];
-  for(let i=0; i<hours.length; i++);
+  hours.forEach((hour, i) => {
+    
+  })
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,7 +85,17 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let treatNumber = 0;
+  arr.forEach(store => {
+    if(store.store === 'Pet store'){
+      store.items.forEach(item =>{
+        if(item.name === 'Treats'){
+          treatNumber = item.quantity;
+        }
+      })
+    }
+  })
+  return treatNumber;
 };
 
 /* ------------------------------------------------------------------------------------------------
