@@ -1,7 +1,8 @@
-# data-structures-and-algorithms
+# Data Structures and Algorithms
 
-A repo used for daily code challenegd in the CodeFellows 301 and 401 courses.
 
-## 401 Code Challenges
+## Table of Contents
 
-1. ()[Array.Reverse]
+1. [Challenge: Reverse an Array](401challenges/ArrayReverse)
+
+1. [Challenge: Insert and shift an array](401challenges/arrayShift/array-shift.js)
