@@ -9,4 +9,4 @@
 
 ## Solution
 
-![arrayShiftWB](401challenges/arrayShift/assets/arrayShift.png)
+![arrayShiftWB](./assets/arrayShift.png)
